@@ -1,0 +1,17 @@
+apiVersion: skaffold/v2beta11
+
+kind: Config
+
+metadata:
+  name: spring-boot-app
+
+build:
+  artifacts:
+   - image: mkt-eng-dev.common.repositories.cloud.sap/mkt/spring-hello-app
+#  - image: spring-hello-app
+#  local: {}
+  
+deploy:
+  kubectl:
+    manifests:
+    - k8s_local_dev.yaml
