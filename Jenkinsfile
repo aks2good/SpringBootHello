@@ -16,9 +16,9 @@ pipeline {
         choice(name: 'choices', choices: '1, 2, 3', description: '')
         string(name: 'deployerName', defaultValue: 'Axman', description: '')
     }
-    triggers {
-        
-    }
+    //triggers {
+    //    
+    //}
     stages {
         stage('Build') { 
             steps {
