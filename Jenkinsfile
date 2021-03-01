@@ -6,11 +6,11 @@ pipeline {
         BUILD_VERSION = '1.0.0'
         //SERVER_CREDENTIALS = credentials('my-server-credentails')
     }
-    tools {
+    //tools {
         // you can define tools used in build here such as mvn, gradle, jdk (currently supported)
         // local jenkins -> global tool configuation
         //maven 'Maven'
-    }
+    //}
     parameters {
         booleanParam(name: 'executeBuild', defaultValue: true, description: 'should we execute the build')
         choice(name: 'choices', choices: '1, 2, 3', description: '')
