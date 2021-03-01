@@ -23,12 +23,14 @@ pipeline {
     //}
     stages {
     	stage('Init') {
-    		// you can write rest of logic below in the groovy script as well to 
-    		// keep this main file clean 
-            script {
-                gv = load "initialScript.groovy"
-                gv.initialize()
-            }
+    		steps {
+				// you can write rest of logic below in the groovy script as well to 
+    			// keep this main file clean 
+            	script {
+                	gv = load "initialScript.groovy"
+                	gv.initialize()
+            	}
+		    }
         }
         stage('Build') { 
             steps {
