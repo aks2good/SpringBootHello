@@ -13,7 +13,7 @@ pipeline {
     //}
     parameters {
         booleanParam(name: 'executeBuild', defaultValue: true, description: 'should we execute the build')
-        choice(name: 'choices', choices: '1, 2, 3', description: '')
+        choice(name: 'choices', choices: [ '1', '2', '3' ], description: '')
         string(name: 'deployerName', defaultValue: 'Axman', description: '')
     }
     //triggers {
@@ -53,18 +53,19 @@ node {
 	// groovy script to be inserted here
 }
 
-post {
+
+//post {
     // this executes after all the stages are done
-    always {
+//    always {
         // this always gets executed
-    }
-    success {
+//    }
+//    success {
         // executes in case of success
-    }
-    failure {
+//    }
+//    failure {
         // executes in case of failure
-    }
-}
+//    }
+//}
 
 
 
