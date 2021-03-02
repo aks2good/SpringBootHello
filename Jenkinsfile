@@ -27,8 +27,8 @@ pipeline {
 				// you can write rest of logic below in the groovy script as well to 
     			// keep this main file clean 
             	script {
-                	gv = load "initialScript.groovy"
-                	gv.initialize()
+                	groovyScript1 = load "initialScript.groovy"
+                	groovyScript1.initialize()
             	}
 		    }
         }
