@@ -1,5 +1,6 @@
 def groovyScript1
 
+//start of pipeline
 pipeline {
     agent any
     environment {
